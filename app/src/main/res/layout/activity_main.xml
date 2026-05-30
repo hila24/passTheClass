@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#121212"
+    android:padding="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="נקודות זכות: 0 🏆"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_alignParentLeft="true" />
+
+        <TextView
+            android:id="@+id/txtLives"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="❤️ חיים: 3"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="bottom">
+
+        <GridLayout
+            android:id="@+id/gameGrid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="3"
+            android:rowCount="6"
+            android:alignmentMode="alignBounds">
+        </GridLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btnRight"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:text="ימינה ▶"
+            android:textSize="18sp"
+            android:backgroundTint="#6750A4"
+            android:textColor="#FFFFFF"
+            android:layout_marginEnd="16dp"/>
+
+        <Button
+            android:id="@+id/btnLeft"
+            android:layout_width="140dp"
+            android:layout_height="60dp"
+            android:text="◀ שמאלה"
+            android:textSize="18sp"
+            android:backgroundTint="#6750A4"
+            android:textColor="#FFFFFF"/>
+    </LinearLayout>
+
+</LinearLayout>
