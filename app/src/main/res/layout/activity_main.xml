@@ -4,31 +4,50 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="#121212"
-    android:padding="16dp">
+    android:padding="12dp">
 
-    <RelativeLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginBottom="8dp">
 
         <TextView
             android:id="@+id/txtScore"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="נקודות זכות: 0 🏆"
+            android:layout_weight="1.6"
+            android:text="🏆 נקודות: 0"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:layout_alignParentLeft="true" />
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/txtDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:text="📏 מרחק: 0 מ'"
+            android:textColor="#FFD700"
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="center" />
 
         <TextView
             android:id="@+id/txtLives"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="❤️ חיים: 3"
             android:textColor="#FFFFFF"
-            android:textSize="20sp"
-            android:layout_alignParentRight="true" />
-    </RelativeLayout>
+            android:textSize="15sp"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:gravity="end" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -41,14 +60,14 @@
             android:id="@+id/gameGrid"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:columnCount="3"
-            android:rowCount="6"
-            android:alignmentMode="alignBounds">
-        </GridLayout>
+            android:columnCount="5"
+            android:rowCount="10"
+            android:alignmentMode="alignBounds" />
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/controlsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -64,7 +83,7 @@
             android:textSize="18sp"
             android:backgroundTint="#6750A4"
             android:textColor="#FFFFFF"
-            android:layout_marginEnd="16dp"/>
+            android:layout_marginEnd="16dp" />
 
         <Button
             android:id="@+id/btnLeft"
@@ -73,7 +92,7 @@
             android:text="◀ שמאלה"
             android:textSize="18sp"
             android:backgroundTint="#6750A4"
-            android:textColor="#FFFFFF"/>
+            android:textColor="#FFFFFF" />
     </LinearLayout>
 
 </LinearLayout>
